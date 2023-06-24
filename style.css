@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    width: 100%;
+    padding: 20px 5% 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1{
+    font-size: 30px;
+    color: #6A69D1;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #444;
+    padding: 6px 8px;
+    background-color: none;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+nav ul li:last-child a{
+    background-color: #6A69D1;
+    color: white;
+    border: 1px solid #6A69D1;
+}
+nav ul li::before{
+    position: absolute;
+    content: "";
+    left: 10%;
+    bottom: -4px;
+    height: 3px;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #6A69D1;
+    transition: .3s;
+    opacity: 0;
+}
+nav ul li:last-child::before{
+    display: none;
+}
+nav ul li:hover::before,
+nav ul li.active::before{
+    opacity: 1;
+    bottom: -1px;
+}
+.container{
+    width: 100%;
+    height: calc(100vh - 90px);
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    flex-basis: 45%;
+}
+.content h1{
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+.content p{
+    font-size: 17px;
+}
+.content button{
+    margin-top: 30px;
+    width: 150px;
+    padding: 8px 0;
+    text-align: center;
+    background-color:  #6A69D1;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    border: 1px solid #6A69D1;
+    border-radius: 5px;
+}
+.image{
+    flex-basis: 55%;
+    height: 100%;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    transition: .3s;
+}
+.btn:hover{
+    background-color: white;
+    border: 1px solid #6A69D1;
+    color: #6A69D1;
+}
+
+/* sign up page */
+.background{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #FFE6F1; */
+    background-color: #F5F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.background .pop-up{
+    height: 78%;
+    width: 70%;
+    background-color: white;
+    display: flex;
+}
+.pop-up .image-side{
+    flex-basis: 65%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.pop-up .image-side img{
+    width: 100%;
+}
+.background .image-side a button{
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    padding: 8px 10px;
+    color: white;
+    background-color: #6A69D1;
+    font-weight: bold;
+    border: 1px solid #6A69D1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+} 
+.background .image-side a button i{
+    margin-right: 3px;
+}
+.background .image-side a{
+    text-decoration: none;
+    
+}
+.pop-up .signup-side{
+    background-color: #6A69D1;
+    flex-basis: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.pop-up .signup-side h2{
+    margin-bottom: 20px;
+    color: white;
+    font-size: 28px;
+}
+.pop-up .signup-side form{
+    width: 77%;
+    display: flex;
+    /* background-color: white; */
+}
+.pop-up .signup-side .signup{
+    height: 72%;
+}
+.pop-up .signup-side form h3{
+    color: #FFEE6C;
+    text-align: center;
+    font-weight: 700;
+}
+.pop-up .signup-side form .form-field{
+    margin-bottom: 6px;
+    width: 100%;
+}
+.pop-up .signup-side form .form-field input,
+.pop-up .signup-side form .form-field select{
+    width: 100%;
+    padding: 5px 5px;
+    outline: none;
+    font-size: 16px;
+}
+.pop-up .signup-side form .form-field input[type = 'submit']{
+    margin-top: 15px;
+    background-color: white;
+    color: #6A69D1;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: .3s;
+}
+.pop-up .signup-side form .form-field input[type = 'submit']:hover{
+    background-color: #FFEE6C;
+}
+.prevNext{
+    width: 35%;
+    margin-top: 15px;
+    margin-right: 15px;
+    background-color: white;
+    color: #6A69D1;
+    padding: 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}
+.prevNext:hover{
+    background-color: #FFEE6C;
+}
+.form-stage{
+    display: none;
+}
+.form-stage:first-child{
+    display: block;
+}
+.dont{
+    width: 77%;
+}
+.pop-up .signup-side p{
+    margin-top: 17px;
+}
+.pop-up .signup-side a{
+    color: #FFEE6C;
+    text-decoration: none;
+}

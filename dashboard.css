@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f5f8ff;
+}
+.side{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid #eee;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); */
+}
+.side .section1,
+.side .section2{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side .section2{
+    border-top: 1px solid silver;
+    justify-content: center;
+}
+.side .section1 h1{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.side .section1 ul,
+.side .section2 ul{
+    width: 90%;
+    /* background-color: black; */
+}
+.side .section1 li,
+.side .section2 li{
+    height: 60px;
+    list-style: none;
+}
+.side .section1 li a,
+.side .section2 li a{
+    color: #555;
+    font-size: 19px;
+    text-decoration: none;
+    transition: .3s;
+    line-height: 60px;
+}
+.side .section1 li a i,
+.side .section2 li a i{
+    margin-right: 10px;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 26px;
+    
+}
+.side .section1 li.active a{
+    color: #6a69d1;
+}
+.side .section1 li.active a i{
+    background-color: #6a69d1;
+    color: white;
+}
+.side .section1 li:hover a,
+.side .section2 li:hover a{
+    color: #6a69d1;
+}
+.main-content{
+    margin-left: 18%;
+}
+.main-content .navigation{
+    width: 100%;
+    background-color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+    padding: 0 3%;
+}
+.main-content .navigation .search{
+    width: 33%;
+    height: 40px;
+    /* background-color: white; */
+    position: relative;
+}
+.main-content .navigation .search input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid silver;
+    outline: none;
+    padding-left: 40px;
+    padding-right: 15px;
+    font-size: 15px;
+}
+.main-content .navigation .search i{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    color: silver;
+}
+.content{
+    padding: 10px 3%;
+    width: 100%;
+    position: relative;
+}
+.heading{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.main-content .content .heading p{
+    margin-left: 10px;
+}
+ .icon{
+    background-color: #6a69d1;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+}
+.cards{
+    display: flex;
+    height: 230px;
+    width: 100%;
+
+    justify-content: space-between;
+}
+.cards .card1{
+    flex-basis: 35%;
+    height: 100%;
+    /* background-color: #6a69d1; */
+    background: linear-gradient(125deg, #6a69d1, #54c4ec);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards .card1 p{
+    font-size: 18px;
+}
+.cards .card1 .balance .balance-text{
+    font-weight: 700;
+    font-size: 22px;
+}
+/* .cards .card1  */
+.cards .card2{
+    flex-basis: 62%;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+.cards .card2 .head{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.card1 .number{
+    width: 100%;
+    text-align: right;
+}
+.detail{
+    display: flex;
+}
+.detail .first{
+    margin-right: 30px;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+.items .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.unit{
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15.5%;
+    height: 80%;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 17px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.unit:hover{
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.unit i, .unit feSpecularLighting{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#transaction-heading{
+    margin-top: 30px;
+}
+.card3{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card3 table{
+    width: 100%;
+    background-color: white;
+    color: #555;
+    font-size: 17px;
+    
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.card3 table th, .card3 table td{
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    width: calc(100%/6);
+}
+.card3 table td{
+    text-align: center;
+}
+.btn{
+    background-color: #6a69d1;
+    color: white;
+    padding: 4px 5px;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+}
+#transfer{
+    position: relative;
+}
+#transfer .back{
+    position: absolute;
+    width: 4%;
+    background-color: #6a69d1;
+    color: white;
+    left: 9%;
+    top: 40px;
+    text-align: center;
+    padding: 2px;
+    font-size: 21px;
+    transition: .3s;
+}
+#transfer .back:hover{
+    color: #6a69d1;
+    background-color: white;
+}
+.popup{
+    width: 76%;
+    background-color: white;
+    height: 350px;
+    margin-left: 12%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+}
+.popup .form-side{
+    flex-basis: 58%;
+}
+.form-side form{
+    margin-top: 20px;
+    text-align: left;
+    width: 85%;
+}
+.form-group{
+    display: none;
+}
+.form-group:first-child{
+    display: block;
+}
+.form-side form .form-field{
+    margin-bottom: 15px;
+}
+.form-side form select,
+.form-side form input{
+    width: 100%;
+    border: 1px solid silver;
+    outline: none;
+    padding: 5px 9px;
+    font-size: 16px;
+}
+form button{
+    width: 30%;
+    border: 1px solid #6a69d1;
+    padding: 5px 9px;
+    font-size: 16px;
+    color: white;
+    background-color: #6a69d1;
+    transition: .3s;
+    margin-right: 15px;
+}
+form button:hover{
+    color: #6a69d1;
+    background-color: white;
+}
+.popup .card-side{
+    flex-basis: 42%;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+}
+.popup .card-side .small-card{
+    height: 55%;
+    /* background-color: #6a69d1; */
+    background: linear-gradient(125deg, #6a69d1, #54c4ec);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popup .card-side .small-card .logo{
+    width: 58px;
+    height: 38px;
+}
+.popup .card-side .small-card .logo img{
+    width: 100%;
+    height: 100%;
+}
+.popup .card-side .small-card .number{
+    text-align: left;
+    width: 100%;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.popup .card-side .small-card .detail{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.popup .card-side .info{
+    padding: 10px 0;
+    height: 35%;
+}
+.popup .card-side .info .text-row{
+    display: flex;
+    justify-content: space-between;
+    line-height: 42px;
+}
+.popup .card-side .info .text-row .left{
+    font-weight: 600;
+}
+
+#account{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#account button.btn{
+    border: 1px solid #6a69d1;
+    padding: 5px 9px;
+    font-size: 16px;
+    color: white;
+    background-color: #6a69d1;
+    transition: .3s;
+    margin-right: 15px;
+}
+#account button:hover{
+    color: #6a69d1;
+    background-color: white;
+}
+#account .popup-page{
+    display: none;
+}
+#account .update{
+    width: 85%;
+    height: fit-content;
+    background-color: #fff;
+    margin: 40px 0;
+    padding: 25px;
+    color: #333;
+    position: relative;
+}
+.update i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 24px;
+}
+#account .update h2{
+    text-align: center;
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+}
+#account .update form{
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#account .update form .form-stage{
+    width: 47.5%;
+}
+.form-field{ 
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form-field input,
+.form-field select{
+    width: 100%;
+    border: 1px solid silver;
+    outline: none;
+    padding: 4px 9px;
+    font-size: 15px;
+}
+.update-btn{
+    width: fit-content;
+    margin-top: 4px;
+}
+.delete{
+    width: 43%;
+    height: fit-content;
+    background-color: #fff;
+    margin: 40px 0;
+    padding: 25px;
+    color: #333;
+    position: relative;
+}
+.delete h3{
+    text-align: center;
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.delete i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 21px;
+}
+.delete .form-group .form-field label{
+    padding-bottom: 10px;
+}
+.delete .form-field button{
+    width: fit-content;
+}
+.delete .delete-stage p{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#dashboard{
+    display: none;
+}
+#dashboard{
+    display: block;
+}
